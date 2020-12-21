@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+</head>
+<body>
+    <h1>Report</h1>
+   현재 BackEnd에서 GraphQL을 사용해 MongoDB를 제어하고 있다.
+   GraphQL은 REST API 를 감싸기 위한 Query Language이고
+   백엔드와 데이터베이스를 연결해주는 ORM이다.
+   * ORM과 ODM은 데이터 베이스의 CRUD를 도와주는 플랫폼(Ex): 버스카드)
+   
+   GraphQL이 MongoDB를 제어하는 상태 즉 Front와 Back이 연결되어있지 않은 상태에서
+   Back( Node JS )이 MongoDB와 연결하여 데이터를 뽑아오면서
+   Front(React)에서 Apollo를 사용하여 연동을 한다.
+   
+   -> React의  App.js가 모든 Component를 감싸고 있고, 밑에 Router가 모든 파일을 감싸고있다.
+   이때 React의 모든것을 Apollo(ApolloProvider)가 감싼다.
+
+   Apollo는 내가 정해놓은 graphQL로 신호를 보내준다.
+   (Request를 보낸다.)
+   이때 Back은 return값을 Response로 받아올 수 있다.
+   *Apollo의 수십가지의 기능중 하나. (절대 graphQL만 연결하는것이 아님.)
+   
+   그렇게 Response로 받아온 데이터를 React의 Presenter.jsx파일에서 return하여 화면에 보여준다.
+</body>
+</html>
